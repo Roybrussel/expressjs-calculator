@@ -40,7 +40,7 @@ app.post("/bmicalculator", function (req, res) {
   var height = req.body.height / 100;
   var weight = parseFloat(req.body.weight);
   var bmiResult = weight / (height * height);
-  res.send(`Your BMI is ${bmiResult}`);
+  res.send(`Your BMI is ${bmiResult.toFixed(2)}`);
 });
 
 app.listen(8181, function () {
